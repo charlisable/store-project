@@ -1,3 +1,33 @@
+header {
+    background-color: pink;
+
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    padding: 10px;
+    list-style: none;
+   
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(237, 214, 231);
+    
+}
+
 main {
-    background-color: antiquewhite;
+    width: 90%;
+    margin: 0 auto;
 }
