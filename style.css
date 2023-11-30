@@ -1,7 +1,15 @@
+nav,
+footer {
+    font-family: 'Playfair Display', serif;
+}
+
+
 header {
     background-color: pink;
 
-    padding: 5px;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,14 +28,124 @@ nav ul li {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+.cart-img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+li:hover {
+    transform: scale(1.1);
 }
 
 body {
     background-color: rgb(237, 214, 231);
-    
+    font-size: 18px;
 }
 
-main {
+.main-wrapper {
     width: 90%;
     margin: 0 auto;
+}
+
+.product-card-wrapper {
+    width: 100%;
+    
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    text-align: center;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.product-card div img {
+    border-radius: 5px;
+}
+
+.product-text {
+    margin: 5px;
+    margin-top: 0px;
+    /* border: 1px solid red; */
+}
+
+
+.cart-button {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.product-card:hover {
+    transform: scale(1.1);
+    border: 1px solid grey;
+}
+
+
+/* Article section */
+.article-one {
+    display: flex;
+
+    width: 60%;
+    margin: 20px auto;
+}
+
+.scared-cat {
+    max-width: 400px;
+
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+
+
+.material-symbols-outlined {
+    display: none;
+    padding: 10px;
+}
+
+@media (max-width: 600px){
+
+    .material-symbols-outlined {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    h2,
+    p {
+        text-align: center;
+    }
+    
+    
+    .product-card {
+        max-width: fit-content;
+    }
+
+    .product-card:hover {
+        transform: none;
+        
+    }
+
+    .article-one {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
 }

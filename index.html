@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <!-- menu svg -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- css link -->
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>My Store</title>
 </head>
 <body>
     <header>
-        <h1>Testing remote repos</h1>
+        <h1 id="top-heading">Hello Hello</h1>
         <nav>
             <ul>
                 <li>
@@ -18,23 +25,132 @@
                     <a href="">About Us</a>
                 </li>
                 <li>
-                    <a href="">Contact Us</a>
+                    <a id="contactLink" href="https://i.pinimg.com/originals/59/54/b4/5954b408c66525ad932faa693a647e3f.jpg">Contact Us</a>
+                </li>
+                <li>
+                    <img class="cart-img" src="./cart.png" alt="cart">
                 </li>
             </ul>
+            <!-- mobile menu icon -->
+            <span class="material-symbols-outlined">
+                menu
+                </span>
         </nav>
     </header>
 
     <main>
-        <h2>Hello</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, perspiciatis molestias. Corrupti nulla explicabo fuga quaerat tempore velit deserunt fugit.</p>
-        <div>
-            <div>
-                <img src="./cat-hat.jpg" alt="">
-            </div>
-            <div>
-                <p>meowdy</p>
-            </div>
+        <div class="main-wrapper">
+            <h2>Welcome to my shop</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, perspiciatis molestias. Corrupti nulla explicabo suga quaerat tempore velit deserunt sugit.</p>
+            
+            <section class="product-card-wrapper">
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <img src="./cat-hat.jpg" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p>meowdy</p>
+                        <p>Price: $25</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="article-one">
+                <div>
+                    <h2>Another section</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, aperiam!</p>
+                </div>
+                <div>
+                    <img class="scared-cat" src="./scaredcat.jpg" alt="scared cat">
+                </div>
+            </section>
         </div>
     </main>
+    <footer>
+        <div>
+            <p>made by charli</p>
+        </div>
+        <div>
+            <a href="#top-heading">back to top ^</a>
+        </div>
+    </footer>
+    <!-- js link -->
+    <script src="./script.js"></script>
 </body>
 </html>
