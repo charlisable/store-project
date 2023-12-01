@@ -4,8 +4,6 @@ const contactLink = document.getElementById('contactLink');
 
 contactLink.setAttribute('target', '_blank');
 
-
-
 // variable for all 'add to cart' buttons
 const allButtons = document.querySelectorAll('.cart-button');
 
@@ -22,3 +20,16 @@ function buttonClicked() {
 }
 
 
+// MOBILE MENU 
+// my variables for hamburger menu and nav menu
+const hamburger = document.querySelector('.material-symbols-outlined');
+const navMenu = document.querySelector('.nav-menu');
+
+// adding event listener for click to hamburger menu
+hamburger.addEventListener('click', mobileMenu);
+
+// function for what happens when we click
+ function mobileMenu() {
+	// nav menu becomes visible when hamburger menu is clicked
+	navMenu.classList.toggle('active');
+ }

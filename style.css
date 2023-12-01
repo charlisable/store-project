@@ -1,9 +1,14 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+
 nav,
 footer {
     font-family: 'Playfair Display', serif;
 }
 
-
+/* header */
 header {
     background-color: pink;
 
@@ -15,7 +20,13 @@ header {
     align-items: center;
 }
 
-nav ul {
+/* NAV */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
     display: flex;
     justify-content: space-around;
 }
@@ -31,15 +42,21 @@ a {
     color: black;
 }
 
-.cart-img {
-    max-width: 40px;
-    max-height: 40px;
-}
-
 li:hover {
     transform: scale(1.1);
 }
 
+/* shopping cart image */
+.cart-img {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 10px;
+}
+
+
+
+
+/* BODY */
 body {
     background-color: rgb(237, 214, 231);
     font-size: 18px;
@@ -50,6 +67,7 @@ body {
     margin: 0 auto;
 }
 
+/* PRODUCT CARDS */
 .product-card-wrapper {
     width: 100%;
     
@@ -77,7 +95,7 @@ body {
     /* border: 1px solid red; */
 }
 
-
+/* ADD TO CART BUTTON */
 .cart-button {
     background-color: white;
     padding: 5px;
@@ -95,12 +113,12 @@ body {
 .article-one {
     display: flex;
 
-    width: 60%;
+    width: 70%;
     margin: 20px auto;
 }
 
 .scared-cat {
-    max-width: 400px;
+    max-width: 300px;
 
 }
 
@@ -111,28 +129,59 @@ footer {
 }
 
 
-
+/* MOBILE HAMBURGER MENU */
 .material-symbols-outlined {
     display: none;
     padding: 10px;
 }
 
 @media (max-width: 600px){
-
+    /* MOBILE HAMBURGER MENU */
     .material-symbols-outlined {
         display: block;
+        cursor: pointer;
+       
     }
 
-    nav ul {
-        display: none;
+    /* NAV */
+    
+    .nav-menu {
+        background-color: white;
+        width: 40%;
+        border-radius: 5px;
+        text-align: center;
+
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+
+        transition: 0.5s;
+
+        position: fixed;
+        left: 100%;
+        top: 70px;
+        
+        /* left: 50px; */
+        padding-right: 10px;
+       
     }
 
+    
+    .nav-menu.active {
+        left: 55%;
+    }
+
+    li {
+        width: 110px;
+    }
+  
+    /* TEXT */
     h2,
     p {
         text-align: center;
     }
     
-    
+    /* PRODUCT CARDS */
     .product-card {
         max-width: fit-content;
     }
@@ -142,6 +191,7 @@ footer {
         
     }
 
+    /* ARTICLE SECTION */
     .article-one {
         flex-direction: column;
         align-items: center;
