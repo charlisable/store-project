@@ -33,3 +33,14 @@ hamburger.addEventListener('click', mobileMenu);
 	// nav menu becomes visible when hamburger menu is clicked
 	navMenu.classList.toggle('active');
  }
+
+//  we want to remove ('active') when any where else but the nav menu and hamburger menu is clicked
+
+const mainBody = document.querySelector('main');
+
+mainBody.addEventListener('click', clickBody);
+
+function clickBody() {
+	navMenu.classList.remove('active');
+}
+
