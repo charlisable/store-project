@@ -53,6 +53,10 @@ li:hover {
     margin: 10px;
 }
 
+.cart-img:hover {
+    transform: scale(1.1);
+}
+
 
 
 
@@ -104,7 +108,7 @@ body {
 }
 
 .product-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     border: 1px solid grey;
 }
 
