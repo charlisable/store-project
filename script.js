@@ -44,3 +44,45 @@ function clickBody() {
 	navMenu.classList.remove('active');
 }
 
+// creating stuff for a cat to appear
+const topHeading = document.getElementById('top-heading');
+const catPeak = document.getElementById('cat-peaking');
+
+topHeading.addEventListener('mouseover', function() {
+	catPeak.classList.add('appear');
+});
+
+// Modal 
+const openModalBtn = document.querySelector('.btn-open');
+const closeModalBtn = document.querySelector('.btn-close');
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+
+// Our functions
+const openModal = function () {
+	// Do some stuff to open the modal when openModalBtn is clicked
+	modal.classList.remove('hidden');
+	overlay.classList.remove('hidden');
+};
+// Add a closeModal function
+const closeModal = function () {
+	// Do some stuff to open the modal when closeModalBtn is clicked
+	modal.classList.add('hidden');
+	overlay.classList.add('hidden');
+};
+
+
+// Event listeners - to connect our elements to our functions
+// this opens the modal when open modal button is clicked
+openModalBtn.addEventListener('click', openModal);
+
+// this closes modal when we click on close modal button
+closeModalBtn.addEventListener('click', closeModal);
+// this closes modal when we click on overlay
+overlay.addEventListener('click', closeModal);
+// this closes modal when we click escape key
+document.addEventListener('keydown', function (e) {
+	if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+		closeModal();
+	}
+});
