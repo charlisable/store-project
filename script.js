@@ -57,18 +57,21 @@ const openModalBtn = document.querySelector('.btn-open');
 const closeModalBtn = document.querySelector('.btn-close');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
+const body = document.body;
 
 // Our functions
 const openModal = function () {
 	// Do some stuff to open the modal when openModalBtn is clicked
 	modal.classList.remove('hidden');
 	overlay.classList.remove('hidden');
+	body.classList.add("fixed");
 };
 // Add a closeModal function
 const closeModal = function () {
 	// Do some stuff to open the modal when closeModalBtn is clicked
 	modal.classList.add('hidden');
 	overlay.classList.add('hidden');
+	body.classList.remove("fixed");
 };
 
 

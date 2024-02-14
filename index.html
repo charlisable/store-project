@@ -16,7 +16,8 @@
 </head>
 <body>
     <header>
-        <h1 id="top-heading">Hello Hello</h1>
+        <div class="out-wrapper">
+           <h1 id="top-heading">Hello Hello</h1>
         <div class="catpeaking-box">
             <img id="cat-peaking" class="cat-peaking" src="./cat-peaking.jpg" alt="">
         </div>
@@ -45,7 +46,9 @@
                 menu
                 </span>
                 
-        </nav>
+        </nav> 
+        </div>
+        
     </header>
 
     <main>
@@ -81,37 +84,36 @@
                 </div>
             </section>
         </div>
-
+        <div class="modal-div">
+             <button class="btn btn-open">Open Modal</button>
+        </div>
        
     </main>
 
 
-    <footer>
-        <!-- Modal -->
+    <footer> 
+        <div class="out-wrapper">
+            <p>made by Charli Ballantyne</p>
+            <!-- LINK TO TOP OF PAGE  -->
+            <div class="to-top">
+                <a href="#top-heading">back to top ^</a>
+            </div> 
+        </div>
+    </footer>
+
+ <!-- Modal -->
         <section class="modal hidden">
             <div class="flex">
             <button class="btn-close">X</button>
             </div>
-            <div>
-            <h3>Stay in touch</h3>
-            <p>
-                Testing modals and other js things 😎
-            </p>
+            <div class="modal-content">
+                <h2>modal things</h2>
+                <p>Howdy</p>
+                <img src="./cat-hat.jpg" alt="cat wearing hat">
             </div>
         </section>
         <div class="overlay hidden"></div>
-        <button class="btn btn-open">Open Modal</button>
 
-
-        <div>
-            <p>made by charli</p>
-        </div>
-
-        <!-- LINK TO TOP OF PAGE  -->
-        <div>
-            <a href="#top-heading">back to top ^</a>
-        </div>
-    </footer>
     <!-- js link -->
     <script src="./script.js"></script>
 </body>
