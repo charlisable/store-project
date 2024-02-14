@@ -24,9 +24,9 @@ header {
 .catpeaking-box {
     width: 200px;
     height: 153px;
-   
+    overflow: hidden;
     position: absolute;
-    left: 170px;
+    left: 22%;
     top: -72px;
 } 
 
@@ -34,6 +34,7 @@ header {
     max-width: 200px;
     mix-blend-mode: multiply;
     opacity: 0%;
+    
 } 
 .appear {
     opacity: 100%;
@@ -76,7 +77,26 @@ li:hover {
 .cart-img:hover {
     transform: scale(1.1);
 }
+/* Welcome Banner section */
+.welcome-banner {
+    height: 300px;
+    width: 100%;
+    /* background-image: url('https://img.freepik.com/free-vector/pink-blue-pastel-shimmery-dreamy-pattern-wallpaper_53876-115661.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702512000&semt=ais');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 
+    display: flex;
+    align-items: center;
+}
+.top-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    
+}
+h2 {
+    margin: 0;
+}
 
 
 
@@ -95,28 +115,44 @@ body {
 .product-card-wrapper {
     width: 100%;
     
-    margin: 0 auto;
+    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
+    gap: 15px;
 }
 
 .product-card {
     text-align: center;
     background-color: white;
-    margin: 5px;
     padding: 5px;
     border-radius: 5px;
+    max-width: 275px;
+    height: 100%;
+}
+.product-img-box{
+    max-width: 100%;
+    height: 300px;
+    width: 270px;
 }
 
-.product-card div img {
+.product-img {
     border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
+
 
 .product-text {
+    height: calc(100% - 300px);
     margin: 5px;
     margin-top: 0px;
     /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* ADD TO CART BUTTON */
@@ -203,7 +239,12 @@ footer {
     padding: 10px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 650px){
+    /* peaking cat */
+    .catpeaking-box {
+        left: 25%;
+        
+    } 
     /* MOBILE HAMBURGER MENU */
     .material-symbols-outlined {
         display: block;
@@ -249,10 +290,6 @@ footer {
         text-align: center;
     }
     
-    /* PRODUCT CARDS */
-    .product-card {
-        max-width: fit-content;
-    }
 
     .product-card:hover {
         transform: none;

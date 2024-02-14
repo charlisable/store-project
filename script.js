@@ -86,3 +86,45 @@ document.addEventListener('keydown', function (e) {
 		closeModal();
 	}
 });
+
+
+
+// testing out store api//////
+
+const apiUrl = "https://fakestoreapi.com/products?limit=6";
+const productCardWrapper = document.getElementById('productCardWrapper');
+
+// //    set up the structure of fetch api with .fetch(), .then(), .then()
+fetch(apiUrl)
+.then(function(response){
+    // .then() convert data to js object
+    return response.json();
+})
+.then(function (result){
+    console.log(result);
+
+	// result.forEach(function(item){})
+		result.forEach(function(item) {
+			
+			const divElement = document.createElement('div')
+			// new product cards
+			const productCard = `
+			<div class="product-card">
+                    <div class="product-img-box">
+                        <img class="product-img" src="${item.image}" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p class="product-description">${item.title}</p>
+                        <p class="product-price">${item.price}</p>
+                        <button class="cart-button">Add to cart</button>
+                    </div>
+            </div>
+			`
+			// placing products in the new divElement
+			divElement.innerHTML = productCard;
+
+			// adding divElement to page in product card wrapper
+			productCardWrapper.appendChild(divElement);
+
+		}) 
+});
