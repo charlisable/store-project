@@ -29,23 +29,23 @@ header {
     position: relative;
 }
 .catpeaking-box {
-    width: 200px;
-    height: 153px;
+    width: 120px;
+    /* height: 64px; */
     overflow: hidden;
     position: absolute;
-    left: 22%;
-    top: -72px;
+    left: 30%;
+    bottom: -5px;
+
 } 
 
 .cat-peaking {
-    max-width: 200px;
+    width: 120px;
     mix-blend-mode: multiply;
     opacity: 0%;
-    
+    transition: ease 1s;
 } 
 .appear {
     opacity: 100%;
-    transition: 2s;
 }
 
 /* NAV */
@@ -285,12 +285,14 @@ footer {
     padding: 10px;
 }
 
-@media (max-width: 650px){
+@media (max-width: 700px){
     /* peaking cat */
     .catpeaking-box {
-        left: 25%;
-        
+        left: 40%;  
     } 
+    .cat-peaking {
+        width: 100px;
+    }
     /* MOBILE HAMBURGER MENU */
     .material-symbols-outlined {
         display: block;

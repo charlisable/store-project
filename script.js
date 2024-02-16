@@ -51,6 +51,9 @@ const catPeak = document.getElementById('cat-peaking');
 topHeading.addEventListener('mouseover', function() {
 	catPeak.classList.add('appear');
 });
+topHeading.addEventListener('mouseout', function(){
+	catPeak.classList.remove('appear');
+})
 
 // Modal 
 const openModalBtn = document.querySelector('.btn-open');
@@ -118,7 +121,7 @@ fetch(apiUrl)
                     </div>
                     <div class="product-text">
                         <p class="product-description">${item.title}</p>
-                        <p class="product-price">${item.price}</p>
+                        <p class="product-price">Price: $${item.price}</p>
                         <button class="cart-button">Add to cart</button>
                     </div>
             </div>
